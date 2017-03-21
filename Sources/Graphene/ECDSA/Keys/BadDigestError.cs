@@ -1,0 +1,2 @@
+﻿//class BadDigestError(Exception):
+//    pass
