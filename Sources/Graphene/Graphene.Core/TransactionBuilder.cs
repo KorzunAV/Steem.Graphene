@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Graphene.Core
+{
+    public class TransactionBuilder
+    {
+        public void Sign()
+        {
+            
+        }
+    }
+}

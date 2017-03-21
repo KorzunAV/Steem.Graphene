@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphene.Core", "Graphene.Core\Graphene.Core.csproj", "{C678479A-A8DF-4A0C-BCE0-8DC19BE855E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECDSA", "ECDSA\ECDSA.csproj", "{CBE944FE-15E4-4617-94F8-09D8C403907E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C678479A-A8DF-4A0C-BCE0-8DC19BE855E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C678479A-A8DF-4A0C-BCE0-8DC19BE855E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C678479A-A8DF-4A0C-BCE0-8DC19BE855E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C678479A-A8DF-4A0C-BCE0-8DC19BE855E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE944FE-15E4-4617-94F8-09D8C403907E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE944FE-15E4-4617-94F8-09D8C403907E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE944FE-15E4-4617-94F8-09D8C403907E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE944FE-15E4-4617-94F8-09D8C403907E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
