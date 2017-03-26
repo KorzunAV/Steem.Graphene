@@ -8,8 +8,29 @@ namespace Graphene.Core
 {
     public class SignedTransaction
     {
+        string data { get; set; }
+
+        public SignedTransaction(params object[] parameters)
+        {
+
+            //super().__init__(OrderedDict([
+            //                ('ref_block_num', Uint16(kwargs['ref_block_num'])),
+            //    ('ref_block_prefix', Uint32(kwargs['ref_block_prefix'])),
+            //    ('expiration', PointInTime(kwargs['expiration'])),
+            //    ('operations', kwargs['operations']),
+            //    ('extensions', kwargs['extensions']),
+            //    ('signatures', kwargs['signatures']),
+            //]))
+        }
+        
+
         public SignedTransaction()
         {
+
+            //   System.Security.Cryptography.ECDiffieHellmanCngPublicKey
+            //System.Security.Cryptography.ECDsaCng
+            //System.Security.Cryptography.ECDsa
+            // System.Security.Cryptography.ECD
         }
 
         //https://github.com/xeroc/python-graphenelib/blob/98de98e219264d45fe04b3c28f3aabd1a9f58b71/graphenebase/signedtransactions.py#L225
