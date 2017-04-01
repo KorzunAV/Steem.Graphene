@@ -191,17 +191,8 @@ namespace Graphene.Core
         }
 
         /// <summary>
-        /// This method obtains the required private keys if present in
-        /// the wallet, finalizes the transaction, signs it and
-        ///     broadacasts it
-        /// 
-        ///     :param operation ops: The operation(or list of operaions) to broadcast
-        ///     :param operation account: The account that authorizes the
-        ///         operation
-        ///     :param string permission: The required permission for
-        ///         signing(active, owner, posting)
-        /// 
-        ///     ... note::
+        /// This method obtains the required private keys if present in the wallet, finalizes the transaction, signs it and broadacasts it
+        ///      ... note::
         /// 
         ///         If ``ops`` is a list of operation, they all need to be
         ///         signable by the same key! Thus, you cannot combine ops
@@ -209,36 +200,39 @@ namespace Graphene.Core
         ///         posting permission.Neither can you use different
         ///         accounts for different operations!
         /// </summary>
-        /// <param name="op"></param>
-        /// <param name="accountName"></param>
-        /// <param name="permission"></param>
-        public void FinalizeOp(Operation op, string accountName, Permission permission)//def finalizeOp(self, ops, account, permission):
+        /// <param name="op">The operation(or list of operaions) to broadcast</param>
+        /// <param name="account">The account that authorizes the operation</param>
+        /// <param name="permission">The required permission for signing(active, owner, posting)</param>
+        public TransactionBuilder FinalizeOp(List<Operation> ops, string account, Permission permission)//def finalizeOp(self, ops, account, permission):
         {
-            var tb = new TransactionBuilder(this);//tx = TransactionBuilder(steem_instance = self)
-            tb.AppendOps(op);//tx.appendOps(ops)
+            var tx = new TransactionBuilder(this);//tx = TransactionBuilder(steem_instance = self)
+            tx.AppendOps(ops);//tx.appendOps(ops)
 
-            //if self.unsigned:
-            //    tx.addSigningInformation(account, permission)
-            //    return tx
-            //else:
-            tb.AppendSigner(accountName, permission);//tx.appendSigner(account, permission)
-            //tx.sign()
-            //return tx.broadcast()
+            if (UnSigned)
+                tx.addSigningInformation(account, permission);
+            return tx;
+            else:
+            tx.AppendSigner(account, permission);//tx.appendSigner(account, permission)
+            tx.Sign();
+            return tx.Broadcast();
         }
 
-        //    def sign(self, tx, wifs=[]):
-        //        """ Sign a provided transaction witht he provided key(s)
-        //            :param dict tx: The transaction to be signed and returned
-        //            :param string wifs: One or many wif keys to use for signing
-        //                a transaction.If not present, the keys will be loaded
-        //               from the wallet as defined in "missing_signatures" key
-        //               of the transactions.
-        //        """
-        //        tx = TransactionBuilder(tx, steem_instance = self)
+        /// <summary>
+        /// Sign a provided transaction witht he provided key(s)
+        /// :param dict tx: The transaction to be signed and returned
+        /// :param string wifs: One or many wif keys to use for signing
+        ///     a transaction.If not present, the keys will be loaded
+        ///    from the wallet as defined in "missing_signatures" key
+        ///    of the transactions.
+        ///  </summary>
+        public void sign() //    def sign(self, tx, wifs=[]):
+        {
+            var tx = TransactionBuilder(tx, this);
 
-        //       tx.appendMissingSignatures(wifs)
-        //        tx.sign()
-        //        return tx.json()
+            //       tx.appendMissingSignatures(wifs)
+            //        tx.sign()
+            //        return tx.json()
+        }
 
         //    def broadcast(self, tx):
         //        """ Broadcast a transaction to the Steem network

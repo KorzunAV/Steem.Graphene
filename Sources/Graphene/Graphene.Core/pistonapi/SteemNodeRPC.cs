@@ -9,7 +9,9 @@
 //warnings.filterwarnings('default', module= __name__)
 //log = logging.getLogger(__name__)
 
+using System;
 using System.Collections.Generic;
+using Graphene.Core.grapheneapi;
 
 namespace Graphene.Core
 {
@@ -38,11 +40,11 @@ namespace Graphene.Core
     ///     ws = SteemNodeRPC("ws://10.0.0.16:8090")
     ///     print(ws.get_account_count())
     /// </summary>
-    public class SteemNodeRPC//class SteemNodeRPC(GrapheneWebsocketRPC):
+    public class SteemNodeRPC : GrapheneWebsocketRPC//class SteemNodeRPC(GrapheneWebsocketRPC):
     {
         //    call_id = 0
         //    api_id = {}
-
+    
         /// <summary>
         /// 
         /// </summary>
@@ -52,6 +54,7 @@ namespace Graphene.Core
         /// <param name="kwargs"></param>
         public SteemNodeRPC(List<string> urls, string user, string password, Dictionary<string, object> kwargs)
         {
+            throw new NotImplementedException();
             //self.apis = kwargs.pop("apis",["database", "network_broadcast"])
             //super(SteemNodeRPC, self).__init__(urls, user, password, ** kwargs)
             //self.chain_params = self.get_network()
@@ -160,5 +163,9 @@ namespace Graphene.Core
         //        """
         //        return super(SteemNodeRPC, self).__getattr__(name)
 
+        public object get_dynamic_global_properties()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

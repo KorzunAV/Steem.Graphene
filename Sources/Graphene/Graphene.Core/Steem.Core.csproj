@@ -42,10 +42,14 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="AssetPrecision.cs" />
+    <Compile Include="Extensions\DictionaryExtension.cs" />
+    <Compile Include="grapheneapi\GrapheneWebsocketRPC.cs" />
+    <Compile Include="Permission.cs" />
     <Compile Include="RPC.cs" />
-    <Compile Include="Steem.cs" />
-    <Compile Include="Transaction.cs" />
-    <Compile Include="TransactionBuilder.cs" />
+    <Compile Include="piston\Steem.cs" />
+    <Compile Include="pistonapi\SteemNodeRPC.cs" />
+    <Compile Include="pistonbase\Transactions.cs" />
+    <Compile Include="piston\TransactionBuilder.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="SignedTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

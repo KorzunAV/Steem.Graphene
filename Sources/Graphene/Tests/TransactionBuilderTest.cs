@@ -48,7 +48,7 @@ namespace Tests
             var accountName = "josephkalu";
 
             var steem = new Steem();
-            var op = new Operation();
+            var op = new List<Operation>();
 
             steem.FinalizeOp(op, accountName, Permission.Posting);
 
