@@ -4,6 +4,9 @@ namespace ECDSA.Keys
 {
     public class SigningKey
     {
+
+
+
         //    def __init__(self, _error__please_use_generate=None):
         //        if not _error__please_use_generate:
         //            raise TypeError("Please use SigningKey.generate() to construct me")
@@ -11,7 +14,7 @@ namespace ECDSA.Keys
         //    def generate(klass, curve=NIST192p, entropy=None, hashfunc=sha1):
         public void Generate()
         {
-            var secexp = Util.RandRange(curve.order, entropy)
+            //var secexp = Util.RandRange(curve.order, entropy)
             //return klass.from_secret_exponent(secexp, curve, hashfunc)
         }
 
@@ -40,11 +43,12 @@ namespace ECDSA.Keys
             //return self
         }
 
-        //    @classmethod
-        //    def from_string(klass, string, curve=NIST192p, hashfunc=sha1):
-        //        assert len(string) == curve.baselen, (len(string), curve.baselen)
-        //        secexp = string_to_number(string)
-        //        return klass.from_secret_exponent(secexp, curve, hashfunc)
+        public void FromString(string wif) //    def from_string(klass, string, curve=NIST192p, hashfunc=sha1):
+        {
+            //assert len(string) == curve.baselen, (len(string), curve.baselen)
+            //secexp = string_to_number(string)
+            //return klass.from_secret_exponent(secexp, curve, hashfunc)
+        }
 
         //    @classmethod
         //    def from_pem(klass, string, hashfunc=sha1):

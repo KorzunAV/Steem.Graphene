@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConverterHelperTest.cs" />
     <Compile Include="TransactionBuilderTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,10 +55,6 @@
     <ProjectReference Include="..\ECDSA\ECDSA.csproj">
       <Project>{cbe944fe-15e4-4617-94f8-09d8c403907e}</Project>
       <Name>ECDSA</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Graphene.Core\Steem.Core.csproj">
-      <Project>{c678479a-a8df-4a0c-bce0-8dc19be855e5}</Project>
-      <Name>Steem.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

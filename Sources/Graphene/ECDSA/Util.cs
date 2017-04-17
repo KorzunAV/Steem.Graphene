@@ -36,8 +36,8 @@
         /// achieve stability within a given release (for repeatable unit tests), but
         /// should not be used as a long-term-compatible key generation algorithm.
         /// </summary>
-        public  RandRange()
-        {
+        //public  RandRange()
+        //{
             // we could handle arbitrary orders (even 256**k+1) better if we created
             // candidates bit-wise instead of byte-wise, which would reduce the
             // worst-case behavior to avg=2 loops, but that would be more complex. The
@@ -62,7 +62,7 @@
             //    raise RuntimeError("randrange() tried hard but gave up, either something"
             //                       " is very wrong or you got realllly unlucky. Order was"
             //                       " %x" % order)
-        }
+        //}
         
         //class PRNG:
         //    # this returns a callable which, when invoked with an integer N, will

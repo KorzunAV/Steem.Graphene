@@ -1,11 +1,12 @@
 ﻿using System.Globalization;
+using ECDSA.EllipticCurves;
 
 namespace ECDSA.Helpers
 {
     /// <summary>
-    /// 
+    /// unhexlify
     /// </summary>
-    public static class ConverterHelper
+    public class ConverterHelper
     {
         public static byte[] HexStringToByteArray(string plainTex)
         {
@@ -15,15 +16,7 @@ namespace ECDSA.Helpers
             return rez;
         }
 
-
-
-
-
-
-
-
-
-
+      
         //--
         public static string Base64Encode(string plainText)
         {

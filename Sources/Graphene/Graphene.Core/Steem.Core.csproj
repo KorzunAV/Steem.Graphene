@@ -30,6 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.3.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,17 +52,21 @@
     <Compile Include="AssetPrecision.cs" />
     <Compile Include="Extensions\DictionaryExtension.cs" />
     <Compile Include="grapheneapi\GrapheneWebsocketRPC.cs" />
+    <Compile Include="graphenebase\SignedTransactions.cs" />
     <Compile Include="Permission.cs" />
+    <Compile Include="pistonbase\SignedTransactions.cs" />
     <Compile Include="RPC.cs" />
     <Compile Include="piston\Steem.cs" />
     <Compile Include="pistonapi\SteemNodeRPC.cs" />
     <Compile Include="pistonbase\Transactions.cs" />
     <Compile Include="piston\TransactionBuilder.cs" />
     <Compile Include="Operation.cs" />
-    <Compile Include="SignedTransaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TransactionDto.cs" />
     <Compile Include="Wallet.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
